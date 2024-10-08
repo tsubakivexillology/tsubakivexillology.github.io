@@ -97,7 +97,9 @@
 
                 <div class="d-flex justify-content-center flag-colors w-100 noto-sans-tc mt-5 mb-5"></div>
                 
-                <div class="flag-title noto-sans-tc w-100 text-center fs-4 mb-3"></div>
+                <div class="flag-title noto-sans-tc w-100 text-center fs-4"></div>
+
+                <div class="d-block bg-black pt-1 mb-4 w-100"></div>
                 
                 <div class="description noto-sans-tc w-100 text-start fs-5" id="description">旗的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
             </div>
@@ -126,7 +128,7 @@
 
         <span class="w-100 mb-5 my-5" id="related-entities">
             <hr class="mb-4">
-            <div class="w-100 text-center fs-3 mb-4 noto-sans-tc">相關旗幟</div>
+            <div class="fos w-100 text-center fs-3 mb-4 noto-sans-tc">相關旗幟</div>
         </span>
 
         <div data-title="flag-display" class="w-100">
@@ -160,10 +162,10 @@
     <!-- bootstrap -->
     <script src="/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- typewriter -->
+    <script src="/js/typewriter.js"></script>
     <!-- fade-in -->
     <script src="/js/fadeInOnScroll.js"></script>
-     <!-- typewriter -->
-      <script src="/js/typewriter.js"></script>
     <!-- flag data -->
     <script src="/js/flag_data.js"></script>
     <script>
@@ -177,12 +179,8 @@
         if (flag == null) {
             window.location.href = "/404.html";
         }
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     setMeta(flag);
-        // });
         $(function() {
             onDocLoaded(function() {
-                // document.title = flag.md;
                 flag.desc = getFlagDesc(flag.en);
                 flag.colors = getFlagColors(flag.en);
                 setMainImage(flag);
@@ -203,12 +201,10 @@
                         appendImage(relatedFlag, flagConfig);
                     }
                 }
-                // add events to images on load
-                
-            fadeInOnScrollAll();
-                
                 // show modal when left click on images
                 refreshAllImageModals();
+
+                fadeInOnScrollAll();
 
                 // set neighbors
                 if (neighbors.prev != null) {
@@ -294,7 +290,6 @@
             // therefore the modal function can be applied to element
             // only after typing effect is complete. 
             descEle.addEventListener("typingComplete", function() {
-                fadeInOnScrollAll();
                 refreshAllImageModals();
             });
         }
@@ -314,7 +309,7 @@
                 flag = getFlagByEn(flag.parent);
             } while (flag !== null);
             $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/category-flag.html" class="text-secondary">旗幟</a></li>`);
-            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html" class="text-secondary"><i class="bi bi-house-fill"></i></a></li>`);
+            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html?scrollTo=cards" class="text-secondary"><i class="bi bi-house-fill"></i></a></li>`);
         }
 
         function setMeta(flag) {
@@ -345,7 +340,7 @@
             // var childrenCount = getFlagChildrenCount(image.en);
             // var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
 
-            $(`<div class="fos text-center p-3">
+            $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses} mw-100 h-auto" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
                     <div class="noto-sans-tc text-secondary pt-2">

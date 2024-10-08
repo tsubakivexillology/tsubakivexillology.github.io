@@ -23,6 +23,15 @@
             aspect-ratio: 1/1;
             max-height: calc(40vh);
         }
+        #related-sites > ul > li {
+            list-style-type: none;
+        }
+        #related-sites > ul > li::before {
+            font-family: "bootstrap-icons";
+            content: "\F287";
+            padding-right: 0.5em;
+            font-size: small;
+        }
     </style>
     <title>旗章製造 - 地方紋章</title>
 </head>
@@ -34,7 +43,7 @@
 
         <nav aria-title="breadcrumb" class="noto-sans-tc w-75 py-1">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/index.html" class="text-secondary"><i class="bi bi-house-fill"></i></a>
+                <li class="breadcrumb-item"><a href="/index.html?scrollTo=cards" class="text-secondary"><i class="bi bi-house-fill"></i></a>
                 <li class="breadcrumb-item text-secondary">地方紋章</li>
             </ol>
         </nav>
@@ -48,7 +57,7 @@
         <div class="fos w-100 mb-5 my-5">
             <div class="w-100 text-center fs-3 mb-4 noto-sans-tc">推薦地方紋章網站</div>
             <div class="row justify-content-center">
-                <div class="col-md-6">
+                <div class="col-md-6" id="related-sites">
                     <ul>
                         <li>
                             <a href="http://www.chikipage.net/ctvsymbol/list/">都道府県別リスト（日本都道府縣徽列表）</a>
@@ -112,7 +121,7 @@
             // var childrenCount = getMonjiChildrenCount(image.en);
             // var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
 
-            $(`<div class="fos text-center p-3">
+            $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
                     <div class="noto-sans-tc text-secondary pt-2">

@@ -53,7 +53,7 @@
 
         <span class="w-100 mb-5 my-5" id="related-entities">
             <hr class="mb-4">
-            <div class="w-100 text-center fs-3 mb-4 noto-sans-tc">其他版本或相關地區</div>
+            <div class="fos w-100 text-center fs-3 mb-4 noto-sans-tc">其他版本或相關地區</div>
         </span>
 
         <div data-title="monji-display" class="w-100 mb-5">
@@ -86,10 +86,10 @@
     <!-- bootstrap -->
     <script src="/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- typewriter -->
+    <script src="/js/typewriter.js"></script>
     <!-- fade-in -->
     <script src="/js/fadeInOnScroll.js"></script>
-    <!-- typewriter -->
-     <script src="/js/typewriter.js"></script>
     <!-- monji data -->
     <script src="/js/monji_data.js"></script>
     <script src="/js/load_html.js"></script>
@@ -104,13 +104,8 @@
         if (monji == null) {
             window.location.href = "/404.html";
         }
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     setMeta(monji);
-        // });
-        
         $(function() {
             onDocLoaded(function() {
-                // document.title = monji.md;
                 monji.desc = getMonjiDesc(monji.en);
                 setMainImage(monji)
                 setBreadcrumb(monji);
@@ -129,7 +124,6 @@
                         appendImage(relatedMonji, monjiConfig);
                     }
                 }
-                // add events to images on load
                 fadeInOnScrollAll();
 
                 // show modal when left click on images
@@ -207,8 +201,6 @@
             // therefore the modal function can be applied to element
             // only after typing effect is complete. 
             descEle.addEventListener("typingComplete", function() {
-                
-            fadeInOnScrollAll();
                 refreshAllImageModals();
             });
         }
@@ -229,7 +221,7 @@
                 monji = getMonjiByEn(monji.parent);
             } while (monji !== null);
             $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/category-monji.html" class="text-secondary">地方紋章</a></li>`);
-            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html" class="text-secondary"><i class="bi bi-house-fill"></i></a></li>`);
+            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html?scrollTo=cards" class="text-secondary"><i class="bi bi-house-fill"></i></a></li>`);
         }
 
         function setMeta(monji) {
@@ -265,7 +257,7 @@
             if (!image.is_main && version.length) {
                 versionHtml = `<span class="ms-2">(v${version})</span>`;
             }
-            $(`<div data-aos-offset="150" class="fos text-center p-3">
+            $(`<div data-aos-offset="150" class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
                     <div class="noto-sans-tc text-secondary pt-2">

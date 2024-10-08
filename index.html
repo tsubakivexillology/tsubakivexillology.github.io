@@ -18,7 +18,7 @@
     <meta name="twitter:title" content="旗章製造" />
     <meta name="twitter:card" content="https://tsubakivexillology.github.io/images/tsubaki-512.png" />
     <meta name="twitter:description" content="旗章製造收錄了以台灣為本的各式旗幟與紋章創作。" />
-    <!-- <link rel="stylesheet" href="/css//infinite_carousel.css"> -->
+    
     <style>
         #background-area {
             background: linear-gradient(rgba(0, 0, 0, 0), rgba(249, 249, 249, 1)), url("/images/background-main.png");
@@ -47,25 +47,6 @@
             width: auto;
             height: auto;
         }
-        /* .mon-display-table {
-            width: 100% !important;
-            table-layout: fixed !important;
-        }
-        td.mon-display-cell[rowspan="2"][colspan="2"] .mon-display-image {
-            width: 200% !important;
-            height: 200% !important;
-        }
-
-        td.mon-display-cell[rowspan="2"] .mon-display-image {
-            height: 200% !important;
-        }
-
-        td.mon-display-cell[colspan="2"] .mon-display-image {
-            width: 200% !important;
-        }
-        .img-thumbnail {
-            border: 0 !important;
-        } */
     </style>
     <title>旗章製造</title>
 </head>
@@ -87,60 +68,15 @@
             </h2>
         </div>
 
-        <!-- <div class="w-100 mb-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <table class="mon-display-table table">
-                        <tbody>
-                            <tr class="mon-display-row">
-                                <td class="mon-display-cell border-0" rowspan="2" colspan="2"><img class="mon-display-img img-thumbnail" id="mimg-1" src=""></td>
-                                <td class="mon-display-cell border-0"><img class="mon-display-img img-thumbnail" id="mimg-2" src=""></td>
-                                <td class="mon-display-cell border-0"><img class="mon-display-img img-thumbnail" id="mimg-3" src=""></td>
-                                <td class="mon-display-cell border-0"><img class="mon-display-img img-thumbnail" id="mimg-4" src=""></td>
-                            </tr>
-                            <tr class="mon-display-row">
-                                <td class="mon-display-cell border-0" rowspan="2" colspan="2"><img class="mon-display-img img-thumbnail" id="mimg-5" src=""></td>
-                                <td class="mon-display-cell border-0"><img class="mon-display-img img-thumbnail" id="mimg-6" src=""></td>
-                            </tr>
-                            <tr class="mon-display-row">
-                                <td class="mon-display-cell border-0"><img class="mon-display-img img-thumbnail" id="mimg-7" src=""></td>
-                                <td class="mon-display-cell border-0"><img class="mon-display-img img-thumbnail" id="mimg-8" src=""></td>
-                                <td class="mon-display-cell border-0"><img class="mon-display-img img-thumbnail" id="mimg-9" src=""></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <div class="w-100 mb-5">
-            <div class="infinite-carousel-container">
-                <div class="infinite-carousel">
-                    <div class="infinite-carousel-item"><img src="/images/flags/flag-of-taipei-city.png" height="180"></div>
-                    <div class="infinite-carousel-item"><img src="/images/flags/flag-of-vexillology-2.png" height="180"></div>
-                    <div class="infinite-carousel-item"><img src="/images/flags/flag-of-penghu-county.png" height="180"></div>
-                    <div class="infinite-carousel-item"><img src="/images/flags/flag-of-high-mountains.png" height="180"></div>
-                    <div class="infinite-carousel-item"><img src="/images/flags/flag-of-coast-guard-naval.png" height="180"></div>
-                    <div class="infinite-carousel-item"><img src="/images/flags/flag-of-tainan-city.png" height="180"></div>
-                    <div class="infinite-carousel-item"><img src="/images/flags/flag-of-hsintsu-city.png" height="180"></div>
-                    <div class="infinite-carousel-item"><img src="/images/flags/flag-of-four-languages-naval.png" height="180"></div>
-                    <div class="infinite-carousel-item"><img src="/images/flags/flag-of-red-lily-naval-2-1.png" height="180"></div>
-                    <div class="infinite-carousel-item"><img src="/images/flags/flag-of-keelung-city.png" height="180"></div>
-                    <div class="infinite-carousel-item"><img src="/images/flags/flag-of-taitung-county.png" height="180"></div>
-                    <div class="infinite-carousel-item"><img src="/images/flags/flag-of-three-whales-1-2.png" height="180"></div>
-                </div>
-              </div>
-        </div> -->
-
         <br class="my-5">
 
         <br class="my-5">
 
         <br class="my-5">
 
-        <div class="fos d-flex justify-content-center my-5 pb-5">
+        <div class="d-flex justify-content-center my-5 py-5">
             <div id="card-ctn">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" id="cards">
                     <div class="col-4 pb-5 px-2">
                         <div class="d-flex justify-content-center">
                             <a type="button" class="card-category hover-zoom text-decoration-none text-center px-0" id="monji-category" href="/category-monji.html">
@@ -188,74 +124,33 @@
     <script src="/plugins/bootstrap/bootstrap.bundle.min.js" type="text/javascript"></script>
     <!-- fade-in -->
     <script src="/js/fadeInOnScroll.js"></script>
-    <!-- <script src="/js/mon_data.js" type="text/javascript"></script>
-    <script src="/js/monji_data.js" type="text/javascript"></script> -->
 
     <script src="/js/load_html.js" type="text/javascript"></script>
     <script>
         $(function() {
             onDocLoaded(function() {
+                scrollToTarget();
                 fadeInOnScrollAll();
             });
         });
+
+        function scrollToTarget() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const scrollTo = urlParams.get("scrollTo");
+
+            if (!scrollTo) return;
+
+            let ele = document.getElementById(scrollTo);
+
+            if (!ele) return;
+
+            let top = ele.getBoundingClientRect().top;
+            let height = ele.getBoundingClientRect().height;
+            let widowHeight = window.innerHeight;
+            let middle = top - ((widowHeight - height) / 2);
+
+            window.scrollTo(0, middle);
+        }
     </script>
-    <!-- <script>
-        window.onload = () => {
-            const carousel = document.querySelector('.infinite-carousel');
-            const items = document.querySelectorAll('.infinite-carousel-item');
-
-            for (var i = 0; i < 2; i++) {
-                items.forEach(item => {
-                    const clone = item.cloneNode(true);
-                    clone.style.display = 'block';
-                    clone.setAttribute("width", 300);
-                    clone.setAttribute("height", 180);
-                    clone.style.border.width = "1px";
-                    carousel.appendChild(clone);
-                });
-            }
-        };
-        var monArray = monImages;
-        monArray = monArray.concat(monjiImages);   // dump everything in this array
-        $(function() {
-            for (var monImage of monImages) {
-                monImage.src = monConfig.dir + monImage.en + ".png";
-            }
-            for (var monjiImage of monjiImages) {
-                monjiImage.src = monjiConfig.dir + monjiImage.en + ".png";
-            }
-            $(".mon-display-img").each(function() {
-                loadMon($(this));
-            });
-            $(".mon-display-img").each(function() {
-                var swipeDuration = randNum(5000, 10000);
-                setInterval(loadMon, swipeDuration, $(this));
-            });
-        });
-
-        function randRoundNum(min, max) {
-            return Math.floor(Math.random() * max) + min;
-        }
-
-        function randNum(min, max) {
-            return Math.random() * max + min;
-        }
-
-        function loadMon(ele) {
-            ele.fadeOut(500);
-            setTimeout((ele) => {
-                var mon;
-                do {
-                    mon = monArray[randRoundNum(0, monArray.length)]; // get random item from monArray
-                } while (isMonExist(mon.src));
-                ele.attr("src", mon.src);
-                ele.fadeIn(500);
-            }, 500, ele);
-        }
-        function isMonExist(src) {
-            if ($(".mon-display-img").filter(`[src="${src}"]`).length) return true;
-            return false;
-        }
-    </script> -->
 </body>
 </html>
