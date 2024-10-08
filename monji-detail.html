@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-load="/html/csslib.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="旗章製造收錄了以台灣為本的各式旗幟與紋章創作。">
+    <meta name="keywords" content="旗章製造,旗章,旗幟,國旗,市旗,縣旗,旗幟學,紋章,和紋,家紋,市徽,市章,縣徽,縣章,設計">
+    <meta name="robots" content="index,follow">
+
+    <!-- Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="旗章製造">
+    <meta property="og:url" content="https://tsubakivexillology.github.io">
+    <meta property="og:image" content="https://tsubakivexillology.github.io/images/tsubaki-512.png">
+    <meta property="og:description" content="旗章製造收錄了以台灣為本的各式旗幟與紋章創作。">
+
+    <!-- Twitter. Yes, it is correctly called Twitter -->
+    <meta name="twitter:site" content="@_inori_tsubaki" />
+    <meta name="twitter:title" content="旗章製造" />
+    <meta name="twitter:card" content="https://tsubakivexillology.github.io/images/tsubaki-512.png" />
+    <meta name="twitter:description" content="旗章製造收錄了以台灣為本的各式旗幟與紋章創作。" />
+    <style>
+        .main-image {
+            aspect-ratio: 1/1;
+            max-height: calc(40vh);
+        }
+        hr {
+            border: 1px solid black;
+            width: 100%;
+        }
+    </style>
+    <title>旗章製造 - 地方紋章</title>
+</head>
+<body style="overflow-x: hidden;">
+    
+    <div data-load="/html/banner_detail.html"></div>
+    
+    <div data-title="body" class="container d-flex flex-wrap justify-content-center W-100 mb-5">
+
+        <nav aria-title="breadcrumb" class="noto-sans-tc w-75 py-1">
+            <ol class="breadcrumb"></ol>
+        </nav>
+
+        <div data-title="display" class="d-flex flex-wrap flex-md-nowrap justify-content-center align-items-center w-75 pt-5 my-5">
+            <img class="main-image me-md-5 mb-5 mb-md-0 modal-trigger-image hover-zoom" data-type="monji">
+            <div>
+                <div class="d-block mb-4">
+                    <h1 class="d-inline monji-name noto-sans-tc"></h1>
+                    <span class="d-inline monji-version text-muted noto-sans-tc ms-2"></span>
+                </div>
+                <div class="description noto-sans-tc fs-5" id="description">紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
+            </div>
+        </div>
+
+        <span class="w-100 mb-5 my-5" id="related-entities">
+            <hr class="mb-4">
+            <div class="w-100 text-center fs-3 mb-4 noto-sans-tc">其他版本或相關地區</div>
+        </span>
+
+        <div data-title="monji-display" class="w-100 mb-5">
+            <div class="d-flex justify-content-center flex-wrap" id="monji-ctn"></div>
+        </div>
+
+        <div data-title="neighbors" class="fos mw-100 mb-5">
+            <div class="d-flex flex-wrap flex-md-nowrap justify-content-center">
+                <span class="w-100 w-md-50 text-center my-2" id="prev-monji">
+                    <a class="text-dark text-nowrap mx-2 fs-4">
+                        <i class="bi bi-arrow-left-square-fill"></i>
+                        <span class="noto-sans-tc text-nowrap"></span>
+                    </a>
+                </span>
+                <span class="w-100 w-md-50 text-center my-2" id="next-monji">
+                    <a class="text-dark text-nowrap mx-2 fs-4">
+                        <span class="noto-sans-tc text-nowrap"></span>
+                        <i class="bi bi-arrow-right-square-fill"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div data-load="/html/footer.html"></div>
+    <div data-load="/html/image_modal.html"></div>
+    
+    <!-- jquery -->
+    <script src="/plugins/jquery/jquery-3.7.1.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- fade-in -->
+    <script src="/js/fadeInOnScroll.js"></script>
+    <!-- typewriter -->
+     <script src="/js/typewriter.js"></script>
+    <!-- monji data -->
+    <script src="/js/monji_data.js"></script>
+    <script src="/js/load_html.js"></script>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const monjiName = urlParams.get("name");
+
+        var monji = getMonjiByEn(monjiName);
+        const neighbors = getNeighborMonjis(monjiName);
+        
+        if (monji == null) {
+            window.location.href = "/404.html";
+        }
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     setMeta(monji);
+        // });
+        
+        $(function() {
+            onDocLoaded(function() {
+                // document.title = monji.md;
+                monji.desc = getMonjiDesc(monji.en);
+                setMainImage(monji)
+                setBreadcrumb(monji);
+                
+                $("#prev-monji").hide();
+                $("#next-monji").hide();
+                
+                const relatedMonjis = getRelatedMonjis(monjiName);
+
+                if (!relatedMonjis.length) {
+                    $("#related-entities").hide();
+                }
+                if (relatedMonjis != undefined && relatedMonjis.length) {
+                    $("div[data-title='monji-display']").addClass("mb-5");
+                    for (var relatedMonji of relatedMonjis) {
+                        appendImage(relatedMonji, monjiConfig);
+                    }
+                }
+                // add events to images on load
+                fadeInOnScrollAll();
+
+                // show modal when left click on images
+                refreshAllImageModals();
+
+                // set neighbors
+                if (neighbors.prev != null) {
+                    var href = `/monji-detail.html?name=${neighbors.prev.en}`;
+                    $("#prev-monji").show();
+                    $("#prev-monji > a").attr("href", href);
+                    $("#prev-monji > a > span").html(neighbors.prev.md);
+                }
+                if (neighbors.next != null) {
+                    var href = `/monji-detail.html?name=${neighbors.next.en}`;
+                    $("#next-monji").show();
+                    $("#next-monji > a").attr("href", href);
+                    $("#next-monji > a > span").html(neighbors.next.md);
+                }
+            });
+        });
+
+        function refreshAllImageModals() {
+            // show modal when left click on images
+            $(".modal-trigger-image").on("mousedown", function(event) {
+                // only trigger on left click
+                if (event.which != 1) return;
+                var imgSrc = $(this).attr("src")
+                    .replace(".png", "-desc.png")
+                    .replace("monjis/", "monjis/descriptions/");
+                
+                if (!$("#image-modal").hasClass("modal-lg")) {
+                    $("#image-modal").addClass("modal-lg");
+                }
+                $("#modal-image-src").attr("src", imgSrc);
+                $("#image-modal-trigger").click();
+            });
+        }
+        
+        function setMainImage(monji) {
+            $(".monji-name").html(
+                `${monji.title_md}`
+            );
+            if (monji.version.length) {
+                var html = `版本 v${monji.version}`;
+                if (monji.is_main) {
+                    html += `<span class="ms-2 badge bg-tcyan">主要版本</span>`
+                }
+                $(".monji-version").html(html);
+            }
+            $(".main-image").attr("src", monjiConfig.dir + monji.en + ".png");
+            $(".main-image").attr("alt", monji.title);
+
+            // default desc is in html
+            let descEle = document.getElementById("description");
+            let descText = "";
+
+            // if desc exists
+            if (monji.desc) {
+                descText = monji.desc;
+
+            // if monji inherits desc
+            } else {
+                do {
+                    if (monji.desc_inherit !== true) break;
+                    const parentMonji = getMonjiByEn(monji.parent);
+                    if (!parentMonji) break;
+                    if (!parentMonji.desc) break;
+                    descText = parentMonji.desc;
+                } while (false);
+            }
+            // apply typewriter effect to element
+            typewriter(descEle, descText);
+            
+            // the typing effect constantly resets the element,
+            // therefore the modal function can be applied to element
+            // only after typing effect is complete. 
+            descEle.addEventListener("typingComplete", function() {
+                
+            fadeInOnScrollAll();
+                refreshAllImageModals();
+            });
+        }
+
+        function setBreadcrumb(monji) {
+            do {
+                if (monji.en === monjiName) {
+                    let displayName;
+                    if (monji.is_main) {
+                        displayName = monji.title_md;
+                    } else {
+                        displayName = ` v${monji.version}`;
+                    }
+                    $(".breadcrumb").prepend(`<li class="breadcrumb-item text-secondary">${displayName}</li>`);
+                } else {
+                    $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/monji-detail.html?name=${monji.en}" class="text-secondary">${monji.title_md}</a></li>`);
+                }
+                monji = getMonjiByEn(monji.parent);
+            } while (monji !== null);
+            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/category-monji.html" class="text-secondary">地方紋章</a></li>`);
+            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html" class="text-secondary"><i class="bi bi-house-fill"></i></a></li>`);
+        }
+
+        function setMeta(monji) {
+            const imageSrc = "https://" +  window.location.host + monjiConfig.dir + monji.en + ".png";
+            const desc = monji.desc ?? "旗章製造收錄了台灣的各式旗幟與紋章創作。";
+
+            setSingleMeta("name", "keywords", `旗章製造,旗章,旗幟,國旗,市旗,縣旗,旗幟學,紋章,和紋,家紋,市徽,市章,縣徽,縣章,設計,${monji.md}`);
+            setSingleMeta("name", "image", imageSrc);
+            setSingleMeta("name", "description", desc);
+            
+            setSingleMeta("property", "og:title", monji.title_md);
+            setSingleMeta("property", "og:description", desc);
+            setSingleMeta("property", "og:description", imageSrc);
+            
+            setSingleMeta("name", "twitter:title", monji.title_md);
+            setSingleMeta("name", "twitter:description", desc);
+            setSingleMeta("name", "twitter:card", imageSrc);
+        }
+
+        function setSingleMeta(attr, attrValue, content) {
+            $(`meta[${attr}="${attrValue}"]`).remove();
+            $(`head`).prepend(`<meta ${attr}="${attrValue}" content="${content}">`);
+        }
+
+        function appendImage(image, config) {
+            var path = config.dir + image.en + ".png";
+            var text = image.title_md;
+            // var childrenCount = getMonjiChildrenCount(image.en);
+            // var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
+
+            var version = image.version;
+            var versionHtml = "";
+            if (!image.is_main && version.length) {
+                versionHtml = `<span class="ms-2">(v${version})</span>`;
+            }
+            $(`<div data-aos-offset="150" class="fos text-center p-3">
+                    <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
+                    <br>
+                    <div class="noto-sans-tc text-secondary pt-2">
+                        <a class="text-secondary" href="/monji-detail.html?name=${image.en}">${text}${versionHtml}</a>
+                    </div>
+                </div>`
+            ).appendTo(config.container);
+        }
+    </script>
+</body>
+</html>
