@@ -145,13 +145,18 @@ var monImages = [
 	{en:"mon-of-5fortune-3-o", md:"五福之三", level:2, parent:"mon-of-5fortune-o", title_en:"Encircled Five Fortunes III", title_md:"五福之三", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-5fortune-4-o", md:"五福之四", level:2, parent:"mon-of-5fortune-o", title_en:"Encircled Five Fortunes IV", title_md:"五福之四", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 
-	{en:"mon-of-ko", md:"柯", level:1, parent:null, title_en:"Ko", title_md:"柯", desc:"柯字的紋章化設計。", desc_inherit:false, tags:"ko", tags_inherit:false},
+	{en:"mon-of-ping-fan", md:"屏文字丸扇", level:1, parent:null, title_en:"Ping Fan", title_md:"屏文字丸扇", desc:"「屏」字化作丸扇形狀的紋。", desc_inherit:false, tags:"ping,fan", tags_inherit:false},
+	{en:"mon-of-ping-fan-o", md:"環內屏文字丸扇", level:2, parent:"mon-of-ping-fan", title_en:"Encircled Ping Fan", title_md:"環內屏文字丸扇", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-ping-fan-3fold", md:"三把屏文字丸扇", level:2, parent:"mon-of-ping-fan", title_en:"Three Ping Fans", title_md:"三把屏文字丸扇", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-ping-fan-3fold-o", md:"環內三把屏文字丸扇", level:2, parent:"mon-of-ping-fan", title_en:"Encircled Three Ping Fans", title_md:"環內三把屏文字丸扇", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 
-	{en:"mon-of-immortal", md:"仙", level:1, parent:null, title_en:"Immortal", title_md:"仙", desc:"仙字的紋章化設計。", desc_inherit:false, tags:"immortal", tags_inherit:false},
+	{en:"mon-of-ko", md:"柯文字", level:1, parent:null, title_en:"Ko", title_md:"柯", desc:"柯字的紋章化設計。", desc_inherit:false, tags:"ko", tags_inherit:false},
+
+	{en:"mon-of-immortal", md:"仙文字", level:1, parent:null, title_en:"Immortal", title_md:"仙文字", desc:"「仙」字的紋章化設計。", desc_inherit:false, tags:"immortal", tags_inherit:false},
 	
-	{en:"mon-of-tai-cloud", md:"台字祥雲", level:2, parent:"mon-of-tai-upon-lily", title_en:"Tai Cloud", title_md:"台字祥雲", desc:"台字祥雲代表吉祥平安在台灣。", desc_inherit:false, tags:"cloud,mon_of_tai", tags_inherit:false},
+	{en:"mon-of-tai-cloud", md:"台文字祥雲", level:2, parent:"mon-of-tai-upon-lily", title_en:"Tai Cloud", title_md:"台文字祥雲", desc:"台文字祥雲代表吉祥平安在台灣。", desc_inherit:false, tags:"cloud,mon_of_tai", tags_inherit:false},
 	
-	{en:"mon-of-tai-thunder", md:"台字雷震", level:2, parent:null, title_en:"Tai Thunder", title_md:"台字雷震", desc:"「難知如陰，動如雷震。」<br><br>台字雷震代表保衛國疆的智慧與力量。", desc_inherit:false, tags:"thunder,mon_of_tai", tags_inherit:false},
+	{en:"mon-of-tai-thunder", md:"台文字雷震", level:2, parent:null, title_en:"Tai Thunder", title_md:"台文字雷震", desc:"「難知如陰，動如雷震。」<br><br>台字雷震代表保衛國疆的智慧與力量。", desc_inherit:false, tags:"thunder,mon_of_tai", tags_inherit:false},
 	
 	{en:"mon-of-malus-spectabilis", md:"海棠", level:1, parent:null, title_en:"Malus Spectabilis", title_md:"海棠", desc:"", desc_inherit:false, tags:"malus_spectabilis", tags_inherit:false},
 	{en:"mon-of-malus-spectabilis-mokkou", md:"四方木瓜內海棠", level:2, parent:"mon-of-malus-spectabilis", title_en:"Mokkou Ensquared Malus Spectabilis", title_md:"四方木瓜內海棠", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
