@@ -3,10 +3,13 @@
     font-weight: 400;
     font-style: normal;
 }
+h1.noto-sans-tc {
+    font-weight: 800 !important;
+}
 .noto-sans-tc {
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
 }
 .massive-title {

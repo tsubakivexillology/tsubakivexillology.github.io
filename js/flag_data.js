@@ -66,7 +66,7 @@ var flagConfig = {
     type: "flag",
     width:300,
     height:180,
-    imageClasses: "modal-trigger-image hover-zoom drop-shadow"
+    imageClasses: "modal-trigger-image drop-shadow"
 };
 
 /**
