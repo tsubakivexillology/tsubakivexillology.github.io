@@ -1,14 +1,45 @@
 <style>
+    :root {
+        --header-image: calc(100vw / 5);
+        --header-background-right-position: calc((100vw / 10) + 8px);
+    }
     #title-image {
-        width: calc(100vw / 5);
+        width: var(--header-image);
     }
     #header-bar {
-        background: linear-gradient(90deg, rgba(33, 37, 41, 1), rgba(0, 0, 0, 0)), url("/images/background-taiwan.png") center center repeat;
-        background-size: auto 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    #header-bar-background {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        mask-image: linear-gradient(-90deg, rgba(33, 37, 41, 1), rgba(0, 0, 0, 0));
+    }
+    #header-bar-image {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("/images/background-taiwan.png");
+        background-position: right var(--header-background-right-position) center;
+        background-repeat: repeat;
+        background-size: contain;
+    }
+    #header-bar-content {
+        z-index: 100;
     }
 </style>
 <div class="title bg-dark d-flex" id="header-bar">
-    <div class="d-flex flex-wrap justify-content-between w-100 align-items-center py-2 px-2">
+    <div id="header-bar-background">
+        <div id="header-bar-image"></div>
+    </div>
+    <div id="header-bar-content" class="d-flex flex-wrap justify-content-between w-100 align-items-center py-2 px-2">
         <div class="massive-title anton-regular lh-1 text-white">
             TSUBAKI
             <br>
