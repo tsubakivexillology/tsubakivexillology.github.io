@@ -103,12 +103,6 @@
                     $("#modal-image-src").attr("src", imgSrc);
                     $("#image-modal-trigger").click();
                 })
-                // images requires time to load and therefore need delay on fade in effect
-                setTimeout(() => {
-                    AOS.init({
-                        once: true
-                    });
-                }, 100);
             });
         });
 
