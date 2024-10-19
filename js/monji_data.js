@@ -99,7 +99,7 @@ var monjiImages = [
     {en:"monji-of-cwh-ershui-2-1", md:"二水鄉二號之一", version:"2.1", is_main:false, level:2, parent:"monji-of-cwh-ershui-1-1", title_en:"Ershui Township", title_md:"二水鄉", desc:"", desc_inherit:true, tags:"changhua,ershui", tags_inherit:false},
     {en:"monji-of-cwh-erlin-1-1", md:"二林鎮一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-changhua-county-5-2", title_en:"Erlin Township", title_md:"二林鎮", desc:"", desc_inherit:false, tags:"changhua,erlin", tags_inherit:false},
     
-    {en:"monji-of-chiayi-city-4-2", md:"嘉義市四號之二", version:"4.2", is_main:true, level:1, parent:null, title_en:"Chiayi City", title_md:"嘉義市", desc:"", desc_inherit:false, tags:"chiayi", tags_inherit:false},
+    {en:"monji-of-chiayi-city-4-2", md:"嘉義市四號之二", version:"4.2", is_main:true, level:1, parent:null, title_en:"Chiayi City", title_md:"嘉義市", desc:"「嘉」字取出「吉加」二字的圖案化設計，象徵嘉義「吉運加臨」。", desc_inherit:false, tags:"chiayi", tags_inherit:false},
     {en:"monji-of-chiayi-county-3-2", md:"嘉義縣三號之二", version:"3.2", is_main:true, level:1, parent:null, title_en:"Chiayi County", title_md:"嘉義縣", desc:"三重山岳的形狀象徵高山壯麗延綿，代表台灣民族的正值率真豪情。", desc_inherit:false, tags:"chiayi,chiayi_county", tags_inherit:false},
     {en:"monji-of-puzi-city-2-1", md:"朴子市二號之一", version:"2.1", is_main:true, level:1, parent:"monji-of-chiayi-county-3-2", title_en:"Puzi City", title_md:"朴子市", desc:"「朴」字的圖案化設計。", desc_inherit:false, tags:"chiayi,puzi", tags_inherit:false},
     {en:"monji-of-taibou-city-1-1", md:"太保市一號之一", version:"1.1", is_main:true, level:1, parent:"monji-of-chiayi-county-3-2", title_en:"Taibou City", title_md:"太保市", desc:"「保」字的圖案化設計。", desc_inherit:false, tags:"chiayi,taibou", tags_inherit:false},
