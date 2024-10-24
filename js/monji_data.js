@@ -113,7 +113,7 @@ var monjiImages = [
     
     {en:"monji-of-pingtung-county-4-1", md:"屏東縣四號之一", version:"4.1", is_main:false, level:2, parent:"monji-of-pingtung-county-7-1", title_en:"Pingtung County", title_md:"屏東縣", desc:"「屏」字的圖案化設計。", desc_inherit:false, tags:"", tags_inherit:true},
     {en:"monji-of-pingtung-county-7-1", md:"屏東縣七號之一", version:"7.1", is_main:true, level:1, parent:null, title_en:"Pingtung County", title_md:"屏東縣", desc:"「屏」字的圖案化設計。", desc_inherit:false, tags:"pingtung", tags_inherit:false},
-    {en:"monji-of-pif-chunri-1-1", md:"春日鄉一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-pingtung-county-7-1", title_en:"Chunri County", title_md:"春日鄉", desc:"「春」字的圖案化設計。", desc_inherit:false, tags:"pingtung,chunri", tags_inherit:false},
+    {en:"monji-of-pif-chunri-1-2", md:"春日鄉一號之二", version:"1.2", is_main:true, level:2, parent:"monji-of-pingtung-county-7-1", title_en:"Chunri County", title_md:"春日鄉", desc:"「春」字的圖案化設計。", desc_inherit:false, tags:"pingtung,chunri", tags_inherit:false},
     {en:"monji-of-pif-zhutian-1-1", md:"竹田鄉一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-pingtung-county-7-1", title_en:"Zhutian County", title_md:"竹田鄉", desc:"「竹田」二字的圖案化設計。", desc_inherit:false, tags:"pingtung,chunri", tags_inherit:false},
     
     {en:"monji-of-taichung-city-3-1", md:"台中市三號之一", version:"3.1", is_main:false, level:2, parent:"monji-of-taichung-city-9-2", title_en:"Taichung City", title_md:"台中市", desc:"「台中」二字的圖案化設計。", desc_inherit:false, tags:"", tags_inherit:true},
