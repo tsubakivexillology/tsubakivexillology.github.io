@@ -38,7 +38,7 @@ var flagImages = [
     
     // {en:"flag-of-taizih-1", md:"台字章旗", level:1, parent:null, title_en:"Flag of Taizih", title_md:"台字章旗", desc:null, desc_inherit:false, colors:"004477,00bfb1,ffffff", colors_inherit:false, tags:"seal_of_tai", tags_inherit:false},
     // {en:"flag-of-taizih-2", md:"台字章旗", level:2, parent:"flag-of-taizih-1", title_en:"Flag of Taizih II", title_md:"台字章旗二號", desc:null, desc_inherit:true, colors:"003265,ffffff", colors_inherit:false, tags:"seal_of_tai", tags_inherit:false},
-    {en:"flag-of-taizih-3", md:"台章旗", level:1, parent:null, title_en:"Flag of Taizih III", title_md:"台章旗", desc:"藍色代表海洋、正義與民主。<br><br>青色代表山岳、生命與和諧。<br><br>白色代表天空、善良與自由。<br><br>台字紋的線條延伸又曲折地填滿整個圓丸，象徵台灣的豐富人文、吉祥和平與團圓美滿。", desc_inherit:true, colors:"003265,ffffff", colors_inherit:false, tags:"seal_of_tai", tags_inherit:false},
+    {en:"flag-of-taizih-3", md:"台章旗", level:1, parent:null, title_en:"Flag of Taizih III", title_md:"台章旗", desc:"藍色代表海洋、正義與民主。<br><br>青色代表山岳、生命與和諧。<br><br>白色代表天空、善良與自由。<br><br>台字紋的線條延伸又曲折地填滿整個圓丸，象徵台灣的豐富人文、吉祥和平與團圓美滿。", desc_inherit:true, colors:"003255,00b4b2,ffffff", colors_inherit:false, tags:"seal_of_tai", tags_inherit:false},
     
     {en:"flag-of-vexillology-1-1", md:"台灣旗幟學", level:1, parent:null, title_en:"Flag of Vexillology", title_md:"台灣旗幟學", desc:null, desc_inherit:false, colors:"003255,00b4b2,ffffff", colors_inherit:false, tags:"vexillology", tags_inherit:false},
     {en:"flag-of-vexillology-1-2", md:"台灣旗幟學之二", level:2, parent:"flag-of-vexillology-1-1", title_en:"Flag of Vexillology II", title_md:"台灣旗幟學之二", desc:null, desc_inherit:false, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
