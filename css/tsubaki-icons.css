@@ -1,0 +1,32 @@
+:root {
+    --taiwan-svg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 400"><path d="M70.71,190H380L190,0,0,190H70.71Zm196.08-42.5H113.21L190,70.71Z"/><path d="M309.29,210H0L190,400,380,210H309.29ZM113.21,252.5H266.79L190,329.29Z"/></svg>');
+    --takao-svg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400"><polygon points="238.38 157.89 224.12 165.36 235.15 171.13 191.03 194.23 180 188.45 157.94 200 121.62 219.01 113.82 223.1 69.71 200 113.82 176.9 135.88 165.36 55.18 123.11 99.3 100.02 180 142.26 271.76 94.23 180 46.19 88.23 94.23 44.14 117.33 0 94.23 180 0 360 94.23 238.38 157.89"/><polygon points="360 305.77 180 400 55.15 334.64 99.28 311.55 180 353.81 271.76 305.77 180 257.74 88.23 305.77 44.12 328.87 0 305.77 135.88 234.64 124.85 228.87 168.97 205.77 180 211.55 202.06 200 246.18 176.9 290.29 200 246.18 223.1 224.12 234.64 360 305.77"/></svg>');
+    --taichuu-svg: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 399.81"><path d="M205,0V40.21a42.48,42.48,0,0,1,15,79.68V82.41H180v37.48a42.48,42.48,0,0,1,15-79.68V0C86.86,2.66,0,91.12,0,199.91s86.86,197.25,195,199.9V359.6a42.48,42.48,0,0,1-15-79.68v37.49h40V279.92a42.48,42.48,0,0,1-15,79.68v40.21c108.14-2.65,195-91.12,195-199.9S313.14,2.66,205,0ZM180,237.37a82.48,82.48,0,0,0-59.73,101.22,159.93,159.93,0,0,1,0-277.36A82.47,82.47,0,0,0,180,162.44Zm99.73,101.22A82.48,82.48,0,0,0,220,237.37V162.44A82.47,82.47,0,0,0,279.73,61.23a159.93,159.93,0,0,1,0,277.36Z"/></svg>');
+}
+
+.tbk::before {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -.125em;
+    content: "";
+    background-color: currentColor;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+/* Monshou */
+.tbk.tbk-taiwan::before {
+    -webkit-mask: var(--taiwan-svg) no-repeat center;
+    mask: var(--taiwan-svg) no-repeat center;
+}
+
+.tbk.tbk-takao::before {
+    -webkit-mask: var(--takao-svg) no-repeat center;
+    mask: var(--takao-svg) no-repeat center;
+}
+
+.tbk.tbk-taichuu::before {
+    -webkit-mask: var(--taichuu-svg) no-repeat center;
+    mask: var(--taichuu-svg) no-repeat center;
+}

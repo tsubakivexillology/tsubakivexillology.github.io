@@ -26,6 +26,7 @@ function typewriter(element, text) {
     element.addEventListener("click", () => {
         intervene = true;
         element.innerHTML = text;
+        element.dispatchEvent(new CustomEvent('typingComplete'));
     });
     function getRandom(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
