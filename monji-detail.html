@@ -113,14 +113,17 @@
                 $("#prev-monji").hide();
                 $("#next-monji").hide();
                 
+                let allVersions = getOtherVersions(monji);
                 const relatedMonjis = getRelatedMonjis(monjiName);
 
-                if (!relatedMonjis.length) {
+                allVersions = allVersions.concat(relatedMonjis);
+
+                if (!allVersions.length) {
                     $("#related-entities").hide();
                 }
-                if (relatedMonjis != undefined && relatedMonjis.length) {
+                if (allVersions != undefined && allVersions.length) {
                     $("div[data-title='monji-display']").addClass("mb-5");
-                    for (var relatedMonji of relatedMonjis) {
+                    for (var relatedMonji of allVersions) {
                         appendImage(relatedMonji, monjiConfig);
                     }
                 }

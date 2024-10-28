@@ -14,16 +14,27 @@ function typewriter(element, text) {
     let index = 0;
     let isTag = false;  // is currently typing char within a tag or not.
     let content = '';   // text build, adds up as the typing goes.
+    let intervene = false;
 
     if (text == undefined || text.length == 0) {
         text = element.innerHTML;
     }
-
+    // long text is kinda annoying
+    // so clicking on the text will
+    // stop animation and complete
+    // the whole typing process.
+    element.addEventListener("click", () => {
+        intervene = true;
+        element.innerHTML = text;
+    });
     function getRandom(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
     }
-
     function type() {
+        // stop looping if intervened.
+        if (intervene == true) {
+            return;
+        }
         // handle if the current character is a tag.
         if (text.charAt(index) === '<') {
             isTag = true;

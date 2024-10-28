@@ -220,6 +220,21 @@ function getMonjiTags(en) {
 }
 
 /**
+ * get all versions of a monji
+ * @param {*} monji 
+ * @returns 
+ */
+function getOtherVersions(monji) {
+    var subversions = [];
+    for (var otherMonji of monjiImages) {
+        if (otherMonji.title_en !== monji.title_en) continue;
+        if (otherMonji.en === monji.en) continue;
+        subversions.push(otherMonji);
+    }
+    return subversions;
+}
+
+/**
  * get all related monjis.
  * @param {string} en 
  * @returns 
@@ -233,6 +248,7 @@ function getRelatedMonjis(en) {
     var tagArray = tags.split(",");
     for (var monji of monjiImages) {
         if (monji.en == en) continue; // skip self
+        if (!monji.is_main) continue; // skip monjis if now main, other versions of the monji will be handled elsewhere.
 
         var thisTags = getMonjiTags(monji.en);
         if (!thisTags.length) continue; // skip monjis with no tags
