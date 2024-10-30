@@ -224,7 +224,8 @@
                 monji = getMonjiByEn(monji.parent);
             } while (monji !== null);
             $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/category-monji.html" class="text-secondary">地方紋章</a></li>`);
-            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html?scrollTo=cards" class="text-secondary"><i class="tbk tbk-taiwan me-1"></i>首頁</a></li>`);
+            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html?scrollTo=cards" class="text-secondary"></i>首頁</a></li>`);
+            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><i class="tbk tbk-taiwan text-secondary"></i></li>`);
         }
 
         function setMeta(monji) {
