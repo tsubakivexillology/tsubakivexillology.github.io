@@ -143,6 +143,9 @@ var monImages = [
 	{en:"mon-of-mountain-3fold-1", md:"三重山文字", level:1, parent:null, title_en:"Three Mountains", title_md:"三重山文字", desc:"", desc_inherit:false, tags:"mountain", tags_inherit:false},
 	{en:"mon-of-mountain-3fold-2", md:"三重山文字之二", level:2, parent:"mon-of-mountain-3fold-1", title_en:"Three Mountains II", title_md:"三重山文字之二", desc:"", desc_inherit:false, tags:"mountain", tags_inherit:false},
 	{en:"mon-of-mountain-3fold-3", md:"三重山文字之三", level:2, parent:"mon-of-mountain-3fold-1", title_en:"Three Mountains III", title_md:"三重山文字之三", desc:"", desc_inherit:false, tags:"mountain", tags_inherit:false},
+	{en:"mon-of-mountain-3fold-4", md:"三重山文字之四", level:2, parent:"mon-of-mountain-3fold-1", title_en:"Three Mountains IV", title_md:"三重山文字之四", desc:"", desc_inherit:false, tags:"mountain", tags_inherit:false},
+	{en:"mon-of-mountain-3fold-5", md:"三重山文字之五", level:2, parent:"mon-of-mountain-3fold-1", title_en:"Three Mountains V", title_md:"三重山文字之五", desc:"", desc_inherit:false, tags:"mountain", tags_inherit:false},
+	{en:"mon-of-mountain-3fold-6", md:"三重山文字之六", level:2, parent:"mon-of-mountain-3fold-1", title_en:"Three Mountains VI", title_md:"三重山文字之六", desc:"", desc_inherit:false, tags:"mountain", tags_inherit:false},
 
 	{en:"mon-of-5fortune-o", md:"五福", level:1, parent:null, title_en:"Five Fortunes", title_md:"五福", desc:"此五福代表「名譽」、「財富」、「長壽」、「健康」與「善終」。", desc_inherit:false, tags:"fortune", tags_inherit:false},
 	{en:"mon-of-5fortune-2-o", md:"五福之二", level:2, parent:"mon-of-5fortune-o", title_en:"Encircled Five Fortunes II", title_md:"五福之二", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
