@@ -1,5 +1,5 @@
 var monjiImages = [
-    {en:"monji-of-taiwan-2-1", md:"台灣二號之一", version:"2.1", is_main:false, level:2, parent:"monji-of-taiwan-3-1", title_en:"Taiwan", title_md:"台灣", desc:"台字紋形成的圓，象徵台灣人的共榮團圓。", desc_inherit:false, tags:"taiwan", tags_inherit:false},
+    {en:"monji-of-taiwan-2-1", md:"台灣二號之一", version:"2.1", is_main:false, level:2, parent:"monji-of-taiwan-3-1", title_en:"Taiwan", title_md:"台灣", desc:"台字紋形成的圓，象徵台灣人的共榮團圓。", desc_inherit:false, tags:"", tags_inherit:true},
     {en:"monji-of-taiwan-3-1", md:"台灣三號之一", version:"3.1", is_main:true, level:1, parent:null, title_en:"Taiwan", title_md:"台灣", desc:"台字祥紋象徵上山下海吉祥平安、象徵台灣人的共榮團圓。", desc_inherit:false, tags:"taiwan", tags_inherit:false},
     {en:"monji-of-gioksan-1-1", md:"玉山一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-taiwan-2-1", title_en:"Jade Mountain", title_md:"玉山", desc:"台字型狀的山字紋，代表台灣百岳之首<span class='text-tcyan'>玉山</span>。", desc_inherit:false, tags:"taiwan,chiayi_county,gioksan,jade_mountain,yushan", tags_inherit:false},
     
@@ -262,9 +262,11 @@ function getRelatedMonjis(en) {
     if (!tags.length) {
         return relatedMonjis; // skip if this monji has no tags
     }
+    var thisMonji = getMonjiByEn(en);
     var tagArray = tags.split(",");
     for (var monji of monjiImages) {
         if (monji.en == en) continue; // skip self
+        if (monji.title_en == thisMonji.title_en) continue; // skip other versions
         if (!monji.is_main) continue; // skip monjis if now main, other versions of the monji will be handled elsewhere.
 
         var thisTags = getMonjiTags(monji.en);
