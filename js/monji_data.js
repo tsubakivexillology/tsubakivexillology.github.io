@@ -1,7 +1,7 @@
 var monjiImages = [
     {en:"monji-of-taiwan-2-1", md:"台灣二號之一", version:"2.1", is_main:false, level:2, parent:"monji-of-taiwan-3-1", title_en:"Taiwan", title_md:"台灣", desc:"台字紋形成的圓，象徵台灣人的共榮團圓。", desc_inherit:false, tags:"", tags_inherit:true},
     {en:"monji-of-taiwan-3-1", md:"台灣三號之一", version:"3.1", is_main:true, level:1, parent:null, title_en:"Taiwan", title_md:"台灣", desc:"台字祥紋象徵上山下海吉祥平安、象徵台灣人的共榮團圓。", desc_inherit:false, tags:"taiwan", tags_inherit:false},
-    {en:"monji-of-gioksan-1-1", md:"玉山一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-taiwan-2-1", title_en:"Jade Mountain", title_md:"玉山", desc:"台字型狀的山字紋，代表台灣百岳之首<span class='text-tcyan'>玉山</span>。", desc_inherit:false, tags:"taiwan,chiayi_county,gioksan,jade_mountain,yushan", tags_inherit:false},
+    {en:"monji-of-gioksan-1-1", md:"玉山一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-taiwan-3-1", title_en:"Jade Mountain", title_md:"玉山", desc:"台字型狀的山字紋，代表台灣百岳之首<span class='text-tcyan'>玉山</span>。", desc_inherit:false, tags:"taiwan,chiayi_county,gioksan,jade_mountain,yushan", tags_inherit:false},
     
     {en:"monji-of-kaohsiung-city-3-5", md:"高雄市三號之五", version:"3.5", is_main:false, level:2, parent:"monji-of-kaohsiung-city-4-8-2", title_en:"Kaohsiung City", title_md:"高雄市", desc:"「高」字的圖案化設計，帶有多重山岳的意象。", desc_inherit:false, tags:"", tags_inherit:true},
     {en:"monji-of-kaohsiung-city-4-8-2", md:"高雄市四號之八", version:"4.8.2", is_main:true, level:1, parent:null, title_en:"Kaohsiung City", title_md:"高雄市", desc:"紋結合了「高」字與<a src='/images/monjis/monji-of-takao-city.png' class='modal-trigger-image text-dark'>日本時代的高雄市章<i class='tbk tbk-takao mx-1'></i></a>，象徵高雄的歷史與人文。<br><br>紋自上而下可分為三個菱形區塊，分別代表和平、民主與自由。", desc_inherit:false, tags:"kaohsiung", tags_inherit:false},
