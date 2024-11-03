@@ -161,8 +161,6 @@ var monImages = [
 
 	{en:"mon-of-immortal", md:"仙文字", level:1, parent:null, title_en:"Immortal", title_md:"仙文字", desc:"「仙」字的紋章化設計。", desc_inherit:false, tags:"immortal", tags_inherit:false},
 	
-	{en:"mon-of-tai-cloud", md:"台文字祥雲", level:2, parent:"mon-of-tai-upon-lily", title_en:"Tai Cloud", title_md:"台文字祥雲", desc:"台文字祥雲代表吉祥平安在台灣。", desc_inherit:false, tags:"cloud,mon_of_tai", tags_inherit:false},
-	
 	{en:"mon-of-tai-thunder", md:"台文字雷震", level:2, parent:null, title_en:"Tai Thunder", title_md:"台文字雷震", desc:"「難知如陰，動如雷震。」<br><br>台字雷震代表保衛國疆的智慧與力量。", desc_inherit:false, tags:"thunder,mon_of_tai", tags_inherit:false},
 	
 	{en:"mon-of-malus-spectabilis", md:"海棠", level:1, parent:null, title_en:"Malus Spectabilis", title_md:"海棠", desc:"", desc_inherit:false, tags:"malus_spectabilis", tags_inherit:false},
