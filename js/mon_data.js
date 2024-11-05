@@ -147,6 +147,13 @@ var monImages = [
 	{en:"mon-of-mountain-3fold-5", md:"三重山文字之五", level:2, parent:"mon-of-mountain-3fold-1", title_en:"Three Mountains V", title_md:"三重山文字之五", desc:"", desc_inherit:false, tags:"mountain", tags_inherit:false},
 	{en:"mon-of-mountain-3fold-6", md:"三重山文字之六", level:2, parent:"mon-of-mountain-3fold-1", title_en:"Three Mountains VI", title_md:"三重山文字之六", desc:"", desc_inherit:false, tags:"mountain", tags_inherit:false},
 
+	{en:"mon-of-asia-1", md:"亞文字", level:1, parent:null, title_en:"Asia", title_md:"亞文字", desc:"亞字的紋章化設計。", desc_inherit:false, tags:"asia", tags_inherit:false},
+	{en:"mon-of-asia-2", md:"亞文字之二", level:2, parent:"mon-of-asia-1", title_en:"Asia", title_md:"亞文字之二", desc:"亞字的紋章化設計。", desc_inherit:false, tags:"", tags_inherit:true},
+	{en:"mon-of-asia-3", md:"亞文字之三", level:2, parent:"mon-of-asia-1", title_en:"Asia", title_md:"亞文字之三", desc:"亞字的紋章化設計。", desc_inherit:false, tags:"", tags_inherit:true},
+	{en:"mon-of-asia-4", md:"亞文字之四", level:2, parent:"mon-of-asia-1", title_en:"Asia", title_md:"亞文字之四", desc:"亞字的紋章化設計。", desc_inherit:false, tags:"", tags_inherit:true},
+
+	{en:"mon-of-jin-1", md:"津文字", level:1, parent:null, title_en:"Jin", title_md:"津文字", desc:"津字的紋章化設計。", desc_inherit:false, tags:"jin", tags_inherit:false},
+
 	{en:"mon-of-5fortune-o", md:"五福", level:1, parent:null, title_en:"Five Fortunes", title_md:"五福", desc:"此五福代表「名譽」、「財富」、「長壽」、「健康」與「善終」。", desc_inherit:false, tags:"fortune", tags_inherit:false},
 	{en:"mon-of-5fortune-2-o", md:"五福之二", level:2, parent:"mon-of-5fortune-o", title_en:"Encircled Five Fortunes II", title_md:"五福之二", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-5fortune-3-o", md:"五福之三", level:2, parent:"mon-of-5fortune-o", title_en:"Encircled Five Fortunes III", title_md:"五福之三", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
@@ -157,11 +164,11 @@ var monImages = [
 	{en:"mon-of-ping-fan-3fold", md:"三把屏文字丸扇", level:2, parent:"mon-of-ping-fan", title_en:"Three Ping Fans", title_md:"三把屏文字丸扇", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-ping-fan-3fold-o", md:"環內三把屏文字丸扇", level:2, parent:"mon-of-ping-fan", title_en:"Encircled Three Ping Fans", title_md:"環內三把屏文字丸扇", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 
-	{en:"mon-of-ko", md:"柯文字", level:1, parent:null, title_en:"Ko", title_md:"柯", desc:"柯字的紋章化設計。", desc_inherit:false, tags:"ko", tags_inherit:false},
+	{en:"mon-of-ko", md:"柯文字", level:1, parent:null, title_en:"Ko", title_md:"柯文字", desc:"柯字的紋章化設計。", desc_inherit:false, tags:"ko", tags_inherit:false},
 
 	{en:"mon-of-immortal", md:"仙文字", level:1, parent:null, title_en:"Immortal", title_md:"仙文字", desc:"「仙」字的紋章化設計。", desc_inherit:false, tags:"immortal", tags_inherit:false},
 	
-	{en:"mon-of-tai-thunder", md:"台文字雷震", level:2, parent:null, title_en:"Tai Thunder", title_md:"台文字雷震", desc:"「難知如陰，動如雷震。」<br><br>台字雷震代表保衛國疆的智慧與力量。", desc_inherit:false, tags:"thunder,mon_of_tai", tags_inherit:false},
+	{en:"mon-of-tai-thunder", md:"台文字雷震", level:2, parent:null, title_en:"Tai Thunder", title_md:"台文字雷震", desc:"「難知如陰，動如雷震。」── 《孫子兵法》<br><br>台字雷震代表保衛國疆的智慧與力量。", desc_inherit:false, tags:"thunder,mon_of_tai", tags_inherit:false},
 	
 	{en:"mon-of-malus-spectabilis", md:"海棠", level:1, parent:null, title_en:"Malus Spectabilis", title_md:"海棠", desc:"", desc_inherit:false, tags:"malus_spectabilis", tags_inherit:false},
 	{en:"mon-of-malus-spectabilis-mokkou", md:"四方木瓜內海棠", level:2, parent:"mon-of-malus-spectabilis", title_en:"Mokkou Ensquared Malus Spectabilis", title_md:"四方木瓜內海棠", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
