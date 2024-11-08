@@ -108,7 +108,7 @@ var monjiImages = [
     {en:"monji-of-penghu-county-3-2", md:"澎湖縣三號之一", version:"3.2", is_main:true, level:1, parent:null, title_en:"Penghu County", title_md:"澎湖縣", desc:"", desc_inherit:false, tags:"penghu", tags_inherit:false},
     {en:"monji-of-magong-city-1-1", md:"馬公市一號之一", version:"1.1", is_main:true, level:1, parent:"monji-of-penghu-county-3-2", title_en:"Magong City", title_md:"馬公市", desc:"", desc_inherit:false, tags:"penghu,magong", tags_inherit:false},
 
-    {en:"monji-of-changhua-county-5-2", md:"彰化縣五號之二", version:"5.2", is_main:true, level:1, parent:null, title_en:"Changhua County", title_md:"彰化縣", desc:"「彰」的「彡」字旁與「化」字的圖案化設計。<br><br>線條描繪出的山岳形狀象徵八卦台地，圓環象徵團圓美滿。", desc_inherit:false, tags:"changhua", tags_inherit:false},
+    {en:"monji-of-changhua-county-5-2", md:"彰化縣五號之二", version:"5.2", is_main:true, level:1, parent:null, title_en:"Changhua County", title_md:"彰化縣", desc:"「彰」的「彡」字旁與「化」字的圖案化設計。<br><br>線條描繪出的陵線象徵八卦台地，圓環象徵團圓美滿。", desc_inherit:false, tags:"changhua", tags_inherit:false},
     {en:"monji-of-changhua-city-1-1", md:"彰化市一號之一", version:"1.1", is_main:false, level:2, parent:"monji-of-changhua-city-4-1", title_en:"Changhua City", title_md:"彰化市", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
     {en:"monji-of-changhua-city-2-1", md:"彰化市二號之一", version:"2.1", is_main:false, level:2, parent:"monji-of-changhua-city-4-1", title_en:"Changhua City", title_md:"彰化市", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
     {en:"monji-of-changhua-city-2-2", md:"彰化市二號之二", version:"2.2", is_main:false, level:2, parent:"monji-of-changhua-city-4-1", title_en:"Changhua City", title_md:"彰化市", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
