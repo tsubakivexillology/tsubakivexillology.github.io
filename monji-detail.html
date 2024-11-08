@@ -43,9 +43,9 @@
         <div data-title="display" class="d-flex flex-wrap flex-md-nowrap justify-content-center align-items-center w-md-75 w-100 pt-5 my-5">
             <img class="main-image me-md-5 mb-5 mb-md-0 modal-trigger-image hover-zoom" data-type="monji">
             <div>
-                <div class="d-block mb-4">
-                    <h1 class="d-inline monji-name noto-sans-tc"></h1>
-                    <span class="d-inline monji-version text-muted noto-sans-tc ms-2"></span>
+                <div class="d-block mb-2">
+                    <h1 class="d-inline monji-name noto-sans-tc fw-800"></h1>
+                    <span class="d-inline monji-version text-muted noto-sans-tc ms-1"></span>
                 </div>
                 <div class="description noto-sans-tc fs-5" id="description">紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
             </div>
@@ -170,9 +170,9 @@
                 `${monji.title_md}`
             );
             if (monji.version.length) {
-                var html = `版本 v${monji.version}`;
+                var html = `v${monji.version}`;
                 if (monji.is_main) {
-                    html += `<span class="ms-2 badge bg-tcyan">主要版本</span>`
+                    html += `<span class="ms-2 badge rounded-0 bg-danger">主要版本</span>`
                 }
                 $(".monji-version").html(html);
             }
@@ -263,9 +263,8 @@
             }
             $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
-                    <br>
                     <div class="noto-sans-tc text-secondary pt-2">
-                        <a class="text-secondary" href="/monji-detail.html?name=${image.en}">${text}${versionHtml}</a>
+                        <a class="text-secondary fw-800" href="/monji-detail.html?name=${image.en}">${text}${versionHtml}</a>
                     </div>
                 </div>`
             ).appendTo(config.container);

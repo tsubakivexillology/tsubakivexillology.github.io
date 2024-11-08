@@ -35,13 +35,28 @@
         .modal-trigger-image {
             cursor: pointer;
         }
-        .hover-zoom:hover {
-            transform: scale(1.1);
-            transition-duration: 0.3s;
+        img.hover-zoom-inner {
+            width: 100%;
+            transition: transform 0.4s ease;
+            transform-origin: 50% 50%;
         }
-        .card-img {
+        img.hover-zoom-inner:hover{
+            transform: scale(1.2);
+            width: 100%;
+        }
+        .hover-zoom-outer {
+            transform: scale(1) !important;
+            transition-duration: 0.3s !important;
+        }
+        .hover-zoom-outer:hover {
+            transform: scale(1.1) !important;
+            transition-duration: 0.3s !important;
+        }
+        .box-shadow {
             border-radius: 1em;
             box-shadow: 10px 10px 20px 0px #c5c5c5;
+        }
+        .card-img {
             max-height: 60vh !important;
             max-width: 25vw !important;
             width: auto;
@@ -61,9 +76,9 @@
     <div data-title="body" id="body" class="container W-100 mb-5">
 
         <div data-title="web-description" class="fos justify-content-center mb-5">
-            <h2 class="noto-sans-tc text-center" style="font-size: 2em;">
+            <h2 class="noto-sans-tc fw-800 text-center" style="font-size: 2em;">
                 這裡收錄著
-                <br class="my-4">
+                <br>
                 台與旗與紋的故事
             </h2>
         </div>
@@ -79,27 +94,39 @@
                 <div class="row justify-content-center" id="cards">
                     <div class="col-4 pb-5 px-2">
                         <div class="d-flex justify-content-center">
-                            <a type="button" class="card-category hover-zoom text-decoration-none text-center px-0" id="monji-category" href="/category-monji.html">
-                                <img src="/images/card-monjis.png" class="card-img d-block mb-2">
-                                <span class="fs-5 text-tblue noto-sans-tc">地方紋章</span>
+                            <a type="button" class="card-category text-decoration-none text-center px-0" id="monji-category" href="/category-monji.html">
+                                <div class="box-shadow  overflow-hidden rounded-4 mb-2">
+                                    <img src="/images/card-monjis.png" class="card-img d-block hover-zoom-inner">
+                                </div>
+                                <div class="hover-zoom-outer">
+                                    <span class="fs-5 text-tblue noto-sans-tc fw-800">地方紋章</span>
+                                </div>
                             </a>
                         </div>
                     </div>
     
                     <div class="col-4 pb-5 px-2">
                         <div class="d-flex justify-content-center">
-                            <a type="button" class="card-category hover-zoom text-decoration-none text-center px-0" id="flag-category" href="/category-flag.html">
-                                <img src="/images/card-flags.png" class="card-img d-block mb-2">
-                                <span class="fs-5 text-tblue noto-sans-tc">旗幟</span>
+                            <a type="button" class="card-category text-decoration-none text-center px-0" id="flag-category" href="/category-flag.html">
+                                <div class="box-shadow overflow-hidden rounded-4 mb-2">
+                                    <img src="/images/card-flags.png" class="card-img d-block hover-zoom-inner">
+                                </div>
+                                <div class="hover-zoom-outer">
+                                    <span class="fs-5 text-tblue noto-sans-tc fw-800">旗幟</span>
+                                </div>
                             </a>
                         </div>
                     </div>
                     
                     <div class="col-4 pb-5 px-2">
                         <div class="d-flex justify-content-center">
-                            <a type="button" class="card-category hover-zoom text-decoration-none text-center px-0" id="mon-category" href="/category-mon.html">
-                                <img src="/images/card-mons.png" class="card-img d-block mb-2">
-                                <span class="fs-5 text-tblue noto-sans-tc">和紋</span>
+                            <a type="button" class="card-category text-decoration-none text-center px-0" id="mon-category" href="/category-mon.html">
+                                <div class="box-shadow  overflow-hidden rounded-4 mb-2">
+                                    <img src="/images/card-mons.png" class="card-img d-block hover-zoom-inner">
+                                </div>
+                                <div class="hover-zoom-outer">
+                                    <span class="fs-5 text-tblue noto-sans-tc fw-800">和紋</span>
+                                </div>
                             </a>
                         </div>
                     </div>
