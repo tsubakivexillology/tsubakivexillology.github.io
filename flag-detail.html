@@ -101,7 +101,10 @@
                 
                 <h1 class="flag-title noto-sans-tc fw-800 w-100 text-center mb-5"></h1>
                 
-                <div class="description noto-sans-tc w-100 text-start fs-5" id="description">旗的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
+                <div class="position-relative">
+                    <div class="description noto-sans-tc w-100 text-start fs-5 invisible" id="description-placeholder">旗的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
+                    <div class="description noto-sans-tc w-100 text-start fs-5 position-absolute top-0 left-0" id="description">旗的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
+                </div>
             </div>
 
             <div data-title="windless-hanged-display">
@@ -264,6 +267,8 @@
                     );
                 }
             }
+            let descPlaceholderEle = document.getElementById("description-placeholder");
+
             // default desc is in html
             let descEle = document.getElementById("description");
             let descText = "";
@@ -281,6 +286,9 @@
                     if (!parentFlag.desc) break;
                     descText = parentFlag.desc;
                 } while (false);
+            }
+            if (descText) {
+                descPlaceholderEle.innerHTML = descText;
             }
             // apply typewriter effect to element
             typewriter(descEle, descText);

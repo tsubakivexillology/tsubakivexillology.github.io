@@ -49,7 +49,10 @@
                 <div class="d-block mb-3 d-flex d-md-block justify-content-center">
                     <h1 class="d-inline mon-name noto-sans-tc fw-800"></h1>
                 </div>
-                <div class="description noto-sans-tc fs-5" id="description">紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
+                <div class="position-relative">
+                    <div class="description noto-sans-tc fs-5 invisible" id="description-placeholder">紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
+                    <div class="description noto-sans-tc fs-5 position-absolute top-0 left-0" id="description">紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
+                </div>
             </div>
         </div>
 
@@ -165,6 +168,9 @@
             $(".main-image").attr("src", monConfig.dir + mon.en + ".png");
             $(".main-image").attr("alt", mon.title);
 
+            // the hidden desc to keep layout not messing around
+            let descPlaceholderEle = document.getElementById("description-placeholder");
+
             // default desc is in html
             let descEle = document.getElementById("description");
             let descText = "";
@@ -182,6 +188,10 @@
                     if (!parentMon.desc) break;
                     parentMon.desc = parentMon.desc;
                 } while (false);
+            }
+            // apply desc text to hidden descEle
+            if (descText) {
+                descPlaceholderEle.innerHTML = descText;
             }
             // apply typewriter effect to element
             typewriter(descEle, descText);
