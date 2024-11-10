@@ -137,27 +137,27 @@
             <div class="d-flex justify-content-center flex-wrap" id="flag-ctn"></div>
         </div>
 
-        <div data-title="neighbors" class="fos mw-100 mb-5">
+        <!-- <div data-title="neighbors" class="fos mw-100 mb-5">
             <div class="text-center">
                 <span class="w-100 w-md-50 text-center my-3" id="prev-flag">
                     <a class="text-dark text-nowrap mx-2 fs-4">
-                        <i class="bi bi-arrow-left-square-fill"></i>
+                        <i class="bi bi-arrow-left-square-fill me-2"></i>
                         <span class="noto-sans-tc text-nowrap"></span>
                     </a>
                 </span>
                 <span class="w-100 w-md-50 text-center my-3" id="next-flag">
                     <a class="text-dark text-nowrap mx-2 fs-4">
                         <span class="noto-sans-tc text-nowrap"></span>
-                        <i class="bi bi-arrow-right-square-fill"></i>
+                        <i class="bi bi-arrow-right-square-fill ms-2"></i>
                     </a>
                 </span>
             </div>
-        </div>
+        </div> -->
 
         <div data-title="back-to-list" class="w-100 mb-5">
-            <div class="text-start">
+            <div class="d-flex justify-content-center">
                 <a href="/category-flag.html" class="btn btn-tsubaki noto-sans-tc fw-800 text-nowrap px-3">
-                    <i class="bi bi-chevron-left me-2"></i>回到列表
+                    <i class="bi bi-grid-fill me-2"></i>回到列表
                 </a>
             </div>
         </div>
@@ -185,7 +185,7 @@
         const flagName = urlParams.get("name");
         
         var flag = getFlagByEn(flagName);
-        const neighbors = getNeighborFlags(flagName);
+        // const neighbors = getNeighborFlags(flagName);
         
         if (flag == null) {
             window.location.href = "/404.html";
@@ -218,18 +218,18 @@
                 fadeInOnScrollAll();
 
                 // set neighbors
-                if (neighbors.prev != null) {
-                    var href = `/flag-detail.html?name=${neighbors.prev.en}`;
-                    $("#prev-flag").show();
-                    $("#prev-flag > a").attr("href", href);
-                    $("#prev-flag > a > span").html(neighbors.prev.md);
-                }
-                if (neighbors.next != null) {
-                    var href = `/flag-detail.html?name=${neighbors.next.en}`;
-                    $("#next-flag").show();
-                    $("#next-flag > a").attr("href", href);
-                    $("#next-flag > a > span").html(neighbors.next.md);
-                }
+                // if (neighbors.prev != null) {
+                //     var href = `/flag-detail.html?name=${neighbors.prev.en}`;
+                //     $("#prev-flag").show();
+                //     $("#prev-flag > a").attr("href", href);
+                //     $("#prev-flag > a > span").html(neighbors.prev.md);
+                // }
+                // if (neighbors.next != null) {
+                //     var href = `/flag-detail.html?name=${neighbors.next.en}`;
+                //     $("#next-flag").show();
+                //     $("#next-flag > a").attr("href", href);
+                //     $("#next-flag > a > span").html(neighbors.next.md);
+                // }
                 var callback = "https://" +  window.location.host + flagConfig.dir + flag.en + ".png";
                 $("#flag-waver-link").bind("click", () => {
                     window.open(`https://krikienoid.github.io/flagwaver/#?src=${encodeURI(callback)}`, `_blank`).focus();
