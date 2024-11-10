@@ -120,6 +120,12 @@ function getNeighborFlags(en) {
     if (thisIndex +1 < flagImages.length) {
         result.next = flagImages[thisIndex +1];
     }
+    if (result.prev == null) {
+        result.prev = flagImages[flagImages.length -1];
+    }
+    if (result.next == null) {
+        result.next = flagImages[0];
+    }
     return result;
 }
 

@@ -222,6 +222,12 @@ function getNeighborMons(en) {
 	if (thisIndex +1 < monImages.length) {
 		result.next = monImages[thisIndex +1];
 	}
+    if (result.prev == null) {
+        result.prev = monImages[monImages.length -1];
+    }
+    if (result.next == null) {
+        result.next = monImages[0];
+    }
 	return result;
 }
 function getMonChildrenCount(parentName) {

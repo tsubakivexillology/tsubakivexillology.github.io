@@ -195,6 +195,12 @@ function getNeighborMonjis(en) {
     if (thisIndex +1 < monjiImages.length) {
         result.next = monjiImages[thisIndex +1];
     }
+    if (result.prev == null) {
+        result.prev = monjiImages[monjiImages.length -1];
+    }
+    if (result.next == null) {
+        result.next = monjiImages[0];
+    }
     return result;
 }
 function getMonjiChildrenCount(parentName) {

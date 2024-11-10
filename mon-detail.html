@@ -58,7 +58,7 @@
 
         <span class="w-100 mb-5 my-5" id="related-entities">
             <hr class="mb-4">
-            <div class="fos w-100 text-center fs-3 mb-4 noto-sans-tc">相關和紋</div>
+            <div class="fos w-100 text-center fs-3 mb-4 noto-sans-tc fw-800">相關作品</div>
         </span>
 
         <div data-title="mon-display" class="w-100 mb-5">
@@ -66,7 +66,7 @@
         </div>
 
         <div data-title="neighbors" class="fos mw-100 mb-5">
-            <div class="d-flex flex-wrap flex-md-nowrap justify-content-center">
+            <div class="text-center">
                 <span class="w-100 w-md-75 text-center my-2" id="prev-mon">
                     <a class="text-dark text-nowrap mx-2 fs-4">
                         <i class="bi bi-arrow-left-square-fill"></i>
@@ -81,6 +81,15 @@
                 </span>
             </div>
         </div>
+
+        <div data-title="back-to-list" class="w-100 mb-5">
+            <div class="text-start">
+                <a href="/category-mon.html" class="btn btn-tsubaki noto-sans-tc fw-800 text-nowrap px-3">
+                    <i class="bi bi-chevron-left me-2"></i>回到列表
+                </a>
+            </div>
+        </div>
+
     </div>
 
     <div data-load="/html/footer.html"></div>
@@ -218,27 +227,27 @@
             $(".breadcrumb").prepend(`<li class="breadcrumb-item"><i class="tbk tbk-taiwan text-secondary"></i></li>`);
         }
 
-        function setMeta(mon) {
-            const imageSrc = "https://" +  window.location.host + monConfig.dir + mon.en + ".png";
-            const desc = mon.desc ?? "旗章製造收錄了台灣的各式旗幟與紋章創作。";
+        // function setMeta(mon) {
+        //     const imageSrc = "https://" +  window.location.host + monConfig.dir + mon.en + ".png";
+        //     const desc = mon.desc ?? "旗章製造收錄了台灣的各式旗幟與紋章創作。";
 
-            setSingleMeta("name", "keywords", `旗章製造,旗章,旗幟,國旗,市旗,縣旗,旗幟學,紋章,和紋,家紋,市徽,市章,縣徽,縣章,設計,${mon.md}`);
-            setSingleMeta("name", "image", imageSrc);
-            setSingleMeta("name", "description", desc);
+        //     setSingleMeta("name", "keywords", `旗章製造,旗章,旗幟,國旗,市旗,縣旗,旗幟學,紋章,和紋,家紋,市徽,市章,縣徽,縣章,設計,${mon.md}`);
+        //     setSingleMeta("name", "image", imageSrc);
+        //     setSingleMeta("name", "description", desc);
             
-            setSingleMeta("property", "og:title", mon.title_md);
-            setSingleMeta("property", "og:description", desc);
-            setSingleMeta("property", "og:description", imageSrc);
+        //     setSingleMeta("property", "og:title", mon.title_md);
+        //     setSingleMeta("property", "og:description", desc);
+        //     setSingleMeta("property", "og:description", imageSrc);
             
-            setSingleMeta("name", "twitter:title", mon.title_md);
-            setSingleMeta("name", "twitter:description", desc);
-            setSingleMeta("name", "twitter:card", imageSrc);
-        }
+        //     setSingleMeta("name", "twitter:title", mon.title_md);
+        //     setSingleMeta("name", "twitter:description", desc);
+        //     setSingleMeta("name", "twitter:card", imageSrc);
+        // }
 
-        function setSingleMeta(attr, attrValue, content) {
-            $(`meta[${attr}="${attrValue}"]`).remove();
-            $(`head`).prepend(`<meta ${attr}="${attrValue}" content="${content}">`);
-        }
+        // function setSingleMeta(attr, attrValue, content) {
+        //     $(`meta[${attr}="${attrValue}"]`).remove();
+        //     $(`head`).prepend(`<meta ${attr}="${attrValue}" content="${content}">`);
+        // }
 
         function appendImage(image, config) {
             var path = config.dir + image.en + ".png";

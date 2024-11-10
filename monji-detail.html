@@ -27,6 +27,9 @@
             border: 1px solid black;
             width: 100%;
         }
+        .main-version {
+            transform: translateY(-0.3em);
+        }
     </style>
     <title>旗章製造 - 地方紋章</title>
 </head>
@@ -36,16 +39,16 @@
     
     <div data-title="body" class="container d-flex flex-wrap justify-content-center W-100 mb-5">
 
-        <nav aria-title="breadcrumb" class="noto-sans-tc w-md-75 w-100 py-1">
+        <nav aria-title="breadcrumb" class="noto-sans-tc w-lg-75 w-100 py-1">
             <ol class="breadcrumb"></ol>
         </nav>
 
-        <div data-title="display" class="d-flex flex-wrap flex-md-nowrap justify-content-center align-items-center w-md-75 w-100 pt-5 my-5">
-            <img class="main-image me-md-5 mb-5 mb-md-0 modal-trigger-image hover-zoom" data-type="monji">
+        <div data-title="display" class="d-flex flex-wrap flex-lg-nowrap justify-content-center align-items-center w-lg-75 w-100 pt-5 my-5">
+            <img class="main-image me-lg-5 mb-5 mb-lg-0 modal-trigger-image hover-zoom" data-type="monji">
             <div>
-                <div class="d-block mb-2">
-                    <h1 class="d-inline monji-name noto-sans-tc fw-800"></h1>
-                    <span class="d-inline monji-version text-muted noto-sans-tc ms-1"></span>
+                <div class="d-block mb-4">
+                    <h1 class="d-inline align-self-end monji-name noto-sans-tc fw-800"></h1>
+                    <span class="d-inline align-self-end monji-version text-muted noto-sans-tc ms-1"></span>
                 </div>
                 <div class="position-relative">
                     <div class="description noto-sans-tc fs-5 invisible" id="description-placeholder">紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
@@ -55,8 +58,8 @@
         </div>
 
         <span class="w-100 mb-5 my-5" id="related-entities">
-            <hr class="mb-4">
-            <div class="fos w-100 text-center fs-3 mb-4 noto-sans-tc">其他版本或相關地區</div>
+            <hr class="mb-2">
+            <div class="fos w-100 text-center fs-3 mb-4 noto-sans-tc fw-800">相關作品</div>
         </span>
 
         <div data-title="monji-display" class="w-100 mb-5">
@@ -64,19 +67,27 @@
         </div>
 
         <div data-title="neighbors" class="fos mw-100 mb-5">
-            <div class="d-flex flex-wrap flex-md-nowrap justify-content-center">
+            <div class="text-center">
                 <span class="w-100 w-md-50 text-center my-2" id="prev-monji">
                     <a class="text-dark text-nowrap mx-2 fs-4">
-                        <i class="bi bi-arrow-left-square-fill"></i>
+                        <i class="bi bi-chevron-left me-2"></i>
                         <span class="noto-sans-tc text-nowrap"></span>
                     </a>
                 </span>
                 <span class="w-100 w-md-50 text-center my-2" id="next-monji">
                     <a class="text-dark text-nowrap mx-2 fs-4">
                         <span class="noto-sans-tc text-nowrap"></span>
-                        <i class="bi bi-arrow-right-square-fill"></i>
+                        <i class="bi bi-chevron-right ms-2"></i>
                     </a>
                 </span>
+            </div>
+        </div>
+
+        <div data-title="back-to-list" class="w-100 mb-5">
+            <div class="text-start">
+                <a href="/category-monji.html" class="btn btn-tsubaki noto-sans-tc fw-800 text-nowrap px-3">
+                    <i class="bi bi-chevron-left me-2"></i>回到列表
+                </a>
             </div>
         </div>
     </div>
@@ -175,7 +186,7 @@
             if (monji.version.length) {
                 var html = `v${monji.version}`;
                 if (monji.is_main) {
-                    html += `<span class="ms-2 badge rounded-0 bg-danger">主要版本</span>`
+                    html += `<span class="ms-2 badge rounded-0 bg-tsubaki main-version">主要版本</span>`
                 }
                 $(".monji-version").html(html);
             }
