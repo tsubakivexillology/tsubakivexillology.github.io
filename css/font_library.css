@@ -12,6 +12,12 @@
     font-weight: 500;
     font-style: normal;
 }
+.noto-sans-tc-800 {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
 .massive-title {
     line-height: 0.95em;
     font-size: calc(100vw / 10);

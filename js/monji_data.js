@@ -64,6 +64,7 @@ var monjiImages = [
     {en:"monji-of-tnn-jiali-1-1", md:"佳里區一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-tainan-city-7-1", title_en:"Jiali Dictrict", title_md:"佳里區", desc:"「佳」字的圖案化設計。", desc_inherit:false, tags:"tainan,jiali", tags_inherit:false},
     {en:"monji-of-tnn-liouying-1-1", md:"柳營區一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-tainan-city-7-1", title_en:"Liouying Dictrict", title_md:"柳營區", desc:"「柳」字的圖案化設計。", desc_inherit:false, tags:"tainan,liouying", tags_inherit:false},
     {en:"monji-of-tnn-madou-1-1", md:"麻豆區一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-tainan-city-7-1", title_en:"Madou Dictrict", title_md:"麻豆區", desc:"「麻」字的圖案化設計。", desc_inherit:false, tags:"tainan,madou", tags_inherit:false},
+    {en:"monji-of-tnn-nanhua-2-1", md:"南化區二號之一", version:"2.1", is_main:true, level:2, parent:"monji-of-tainan-city-7-1", title_en:"Nanhua Dictrict", title_md:"南化區", desc:"「化」字的圖案化設計。", desc_inherit:false, tags:"tainan,nanhua", tags_inherit:false},
     {en:"monji-of-tnn-north-3-1", md:"北區三號之一", version:"3.1", is_main:true, level:2, parent:"monji-of-tainan-city-7-1", title_en:"North Dictrict", title_md:"北區", desc:"「北」字的圖案化設計。", desc_inherit:false, tags:"tainan,tnn_north", tags_inherit:false},
     {en:"monji-of-tnn-qigu-1-2", md:"七股區一號之二", version:"1.2", is_main:false, level:2, parent:"monji-of-tnn-qigu-2-1", title_en:"Qigu Dictrict", title_md:"七股區", desc:"", desc_inherit:true, tags:"tainan,qigu", tags_inherit:false},
     {en:"monji-of-tnn-qigu-2-1", md:"七股區二號之一", version:"2.1", is_main:true, level:2, parent:"monji-of-tainan-city-7-1", title_en:"Qigu Dictrict", title_md:"七股區", desc:"「七」字的圖案化設計。", desc_inherit:false, tags:"tainan,qigu", tags_inherit:false},
@@ -95,6 +96,7 @@ var monjiImages = [
     {en:"monji-of-new-taipei-city-8-2", md:"新北市八號之二", version:"8.2", is_main:true, level:1, parent:null, title_en:"New Taipei City", title_md:"新北市", desc:"「北」字的圖案化設計。", desc_inherit:false, tags:"new_taipei,taipei", tags_inherit:false},
    
     {en:"monji-of-hualian-county-7-1", md:"花蓮縣七號之一", version:"7.1", is_main:true, level:1, parent:null, title_en:"Hualian County", title_md:"花蓮縣", desc:"", desc_inherit:false, tags:"hualian", tags_inherit:false},
+    {en:"monji-of-hualian-city-1-1", md:"花蓮市一號之一", version:"1.1", is_main:true, level:1, parent:"monji-of-hualian-county-7-1", title_en:"Hualian City", title_md:"花蓮市", desc:"「花」字的五瓣花紋設計。", desc_inherit:false, tags:"hualian", tags_inherit:false},
     
     {en:"monji-of-keelung-city-4-1", md:"基隆市四號之一", version:"4.1", is_main:true, level:1, parent:null, title_en:"Keelung", title_md:"基隆市", desc:"", desc_inherit:false, tags:"keelung", tags_inherit:false},
     
@@ -114,11 +116,12 @@ var monjiImages = [
     {en:"monji-of-changhua-city-2-2", md:"彰化市二號之二", version:"2.2", is_main:false, level:2, parent:"monji-of-changhua-city-4-1", title_en:"Changhua City", title_md:"彰化市", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
     {en:"monji-of-changhua-city-3-1", md:"彰化市三號之一", version:"3.1", is_main:false, level:2, parent:"monji-of-changhua-city-4-1", title_en:"Changhua City", title_md:"彰化市", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
     {en:"monji-of-changhua-city-3-2", md:"彰化市三號之二", version:"3.2", is_main:false, level:2, parent:"monji-of-changhua-city-4-1", title_en:"Changhua City", title_md:"彰化市", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
-    {en:"monji-of-changhua-city-4-1", md:"彰化市四號之一", version:"4.1", is_main:true, level:1, parent:"monji-of-changhua-county-5-2", title_en:"Changhua City", title_md:"彰化市", desc:"「化」字的圖案化設計。<br><br>四個圓環象徵民主、自由、歷史與文化", desc_inherit:false, tags:"", tags_inherit:true},
-    {en:"monji-of-cwh-ershui-1-1", md:"二水鄉一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-changhua-county-5-2", title_en:"Ershui Township", title_md:"二水鄉", desc:"", desc_inherit:false, tags:"changhua,ershui", tags_inherit:false},
+    {en:"monji-of-changhua-city-4-1", md:"彰化市四號之一", version:"4.1", is_main:true, level:1, parent:"monji-of-changhua-county-5-2", title_en:"Changhua City", title_md:"彰化市", desc:"「化」字的圖案化設計。<br><br>四個圓環象徵民主、自由、和諧與美滿。", desc_inherit:false, tags:"", tags_inherit:true},
+    {en:"monji-of-cwh-ershui-1-1", md:"二水鄉一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-changhua-county-5-2", title_en:"Ershui Township", title_md:"二水鄉", desc:"「二水」二字的圖案化設計。", desc_inherit:false, tags:"changhua,ershui", tags_inherit:false},
     {en:"monji-of-cwh-ershui-1-2", md:"二水鄉一號之二", version:"1.2", is_main:false, level:2, parent:"monji-of-cwh-ershui-1-1", title_en:"Ershui Township", title_md:"二水鄉", desc:"", desc_inherit:true, tags:"changhua,ershui", tags_inherit:false},
     {en:"monji-of-cwh-ershui-2-1", md:"二水鄉二號之一", version:"2.1", is_main:false, level:2, parent:"monji-of-cwh-ershui-1-1", title_en:"Ershui Township", title_md:"二水鄉", desc:"", desc_inherit:true, tags:"changhua,ershui", tags_inherit:false},
-    {en:"monji-of-cwh-erlin-1-1", md:"二林鎮一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-changhua-county-5-2", title_en:"Erlin Township", title_md:"二林鎮", desc:"", desc_inherit:false, tags:"changhua,erlin", tags_inherit:false},
+    {en:"monji-of-cwh-xiushui-1-1", md:"秀水鄉一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-changhua-county-5-2", title_en:"Xiushui Township", title_md:"秀水鄉", desc:"「水」字的圖案化設計。", desc_inherit:true, tags:"changhua,xiushui", tags_inherit:false},
+    {en:"monji-of-cwh-erlin-1-1", md:"二林鎮一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-changhua-county-5-2", title_en:"Erlin Township", title_md:"二林鎮", desc:"兩個「林」字的圖案化設計。", desc_inherit:false, tags:"changhua,erlin", tags_inherit:false},
     
     {en:"monji-of-chiayi-city-4-2", md:"嘉義市四號之二", version:"4.2", is_main:true, level:1, parent:null, title_en:"Chiayi City", title_md:"嘉義市", desc:"「嘉」字取出「吉加」二字的圖案化設計，象徵嘉義「吉運加臨」。", desc_inherit:false, tags:"chiayi", tags_inherit:false},
     {en:"monji-of-chiayi-county-3-2", md:"嘉義縣三號之二", version:"3.2", is_main:true, level:1, parent:null, title_en:"Chiayi County", title_md:"嘉義縣", desc:"三重山岳的形狀象徵高山壯麗延綿，代表台灣民族的正值率真豪情。", desc_inherit:false, tags:"chiayi,chiayi_county", tags_inherit:false},
@@ -127,6 +130,7 @@ var monjiImages = [
     {en:"monji-of-chy-budai-1-1", md:"布袋鎮一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-chiayi-county-3-2", title_en:"Budai Township", title_md:"布袋鎮", desc:"「布」字的圖案化設計。", desc_inherit:false, tags:"chiayi,budai", tags_inherit:false},
     {en:"monji-of-chy-dalin-1-1", md:"大林鎮一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-chiayi-county-3-2", title_en:"Dalin Township", title_md:"大林鎮", desc:"「大林」二字的圖案化設計。", desc_inherit:false, tags:"chiayi,dalin", tags_inherit:false},
     {en:"monji-of-chy-lucao-1-1", md:"鹿草鄉一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-chiayi-county-3-2", title_en:"Lucao Township", title_md:"鹿草鄉", desc:"「草」字的圖案化設計。", desc_inherit:false, tags:"chiayi,lucao", tags_inherit:false},
+    {en:"monji-of-chy-shuishang-1-1", md:"水上鄉一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-chiayi-county-3-2", title_en:"Shuishang Township", title_md:"水上鄉", desc:"「水上」二字的圖案化設計。", desc_inherit:false, tags:"chiayi,shuishang", tags_inherit:false},
     {en:"monji-of-chy-zhongpu-1-1", md:"中埔鄉一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-chiayi-county-3-2", title_en:"Zhongpu Township", title_md:"中埔鄉", desc:"「中」字的圖案化設計。", desc_inherit:false, tags:"chiayi,zhongpu", tags_inherit:false},
     {en:"monji-of-chy-zhuqi-1-1", md:"竹崎鄉一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-chiayi-county-3-2", title_en:"Zhuqi Township", title_md:"竹崎鄉", desc:"「竹」字的圖案化設計。", desc_inherit:false, tags:"chiayi,zhuqi", tags_inherit:false},
     
