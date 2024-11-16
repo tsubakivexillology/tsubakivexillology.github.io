@@ -158,6 +158,7 @@ var monImages = [
 	{en:"mon-of-5fortune-2-o", md:"五福之二", level:2, parent:"mon-of-5fortune-o", title_en:"Encircled Five Fortunes II", title_md:"五福之二", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-5fortune-3-o", md:"五福之三", level:2, parent:"mon-of-5fortune-o", title_en:"Encircled Five Fortunes III", title_md:"五福之三", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-5fortune-4-o", md:"五福之四", level:2, parent:"mon-of-5fortune-o", title_en:"Encircled Five Fortunes IV", title_md:"五福之四", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-5fortune-5", md:"五福之五", level:2, parent:"mon-of-5fortune-o", title_en:"Encircled Five Fortunes V", title_md:"五福之五", desc:"五個注音「ㄈ」代表五福。", desc_inherit:false, tags:"", tags_inherit:true},
 
 	{en:"mon-of-ping-fan", md:"屏文字丸扇", level:1, parent:null, title_en:"Ping Fan", title_md:"屏文字丸扇", desc:"「屏」字化作丸扇形狀的紋。", desc_inherit:false, tags:"ping,fan", tags_inherit:false},
 	{en:"mon-of-ping-fan-o", md:"環內屏文字丸扇", level:2, parent:"mon-of-ping-fan", title_en:"Encircled Ping Fan", title_md:"環內屏文字丸扇", desc:"", desc_inherit:true, tags:"", tags_inherit:true},

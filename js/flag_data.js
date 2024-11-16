@@ -42,6 +42,8 @@ var flagImages = [
     
     {en:"flag-of-vexillology-1-1", md:"台灣旗幟學", level:1, parent:null, title_en:"Flag of Vexillology", title_md:"台灣旗幟學", desc:null, desc_inherit:false, colors:"003255,00b4b2,ffffff", colors_inherit:false, tags:"vexillology", tags_inherit:false},
     {en:"flag-of-vexillology-1-2", md:"台灣旗幟學之二", level:2, parent:"flag-of-vexillology-1-1", title_en:"Flag of Vexillology II", title_md:"台灣旗幟學之二", desc:null, desc_inherit:false, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+
+    {en:"flag-of-unnamed-1", md:"未命名旗", level:1, parent:null, title_en:"Unnamed Flag", title_md:"未命名旗", desc:"紅色代表人性與熱情，黑色代表公正與大正義，白色代表純樸與真誠。<br><br>太極代表天地萬事和諧、邪氣都要遠離。", desc_inherit:false, colors:"bf0020,000000", colors_inherit:false, tags:"", tags_inherit:true},
     
     {en:"flag-of-department-of-state", md:"行政院旗", level:1, parent:null, title_en:"Flag of Department of State", title_md:"行政院旗", desc:null, desc_inherit:false, colors:"003255,ffd700", colors_inherit:false, tags:"government,lily", tags_inherit:false},
     {en:"flag-of-department-of-finance", md:"財政部旗", level:1, parent:null, title_en:"Flag of Department of Finance", title_md:"財政部旗", desc:null, desc_inherit:false, colors:"003255,ffd700", colors_inherit:false, tags:"government,finance", tags_inherit:false},
